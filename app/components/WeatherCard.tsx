@@ -1,14 +1,17 @@
-// WeatherCard.tsx
 import React from 'react';
 import { View, Text, Image } from 'react-native';
 import styles from '../styles/WeatherCardStyles';
 
-// Weather type mapping to corresponding image
+// Mapping weather conditions to corresponding image sources
 const weatherImages: { [key: string]: any } = {
-  sunny: require('../../assets/imgs/sunny.png'),
-  cloudy: require('../../assets/imgs/cloudy.png'),
-  rainy: require('../../assets/imgs/rainy.png'),
-  snowy: require('../../assets/imgs/snowy.png')
+  'partly-cloudy-day': require('../../assets/imgs/cloudy.png'),
+  'partly-cloudy-night': require('../../assets/imgs/cloudy.png'),
+  'clear-day': require('../../assets/imgs/sunny.png'),
+  'clear-night': require('../../assets/imgs/sunny.png'),
+  'rain': require('../../assets/imgs/rainy.png'),
+  'snow': require('../../assets/imgs/snowy.png'),
+  'cloudy': require('../../assets/imgs/cloudy.png'),
+  // Add more mappings as needed
 };
 
 interface WeatherCardProps {
