@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from './app/screens/SplashScreen';
 import InputScreen from './app/screens/InputScreen';
 import ResultsScreen from './app/screens/ResultsScreen';
-import { RootStackParamList } from './app/types';
+import { RootStackParamList } from './app//utils/types';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
