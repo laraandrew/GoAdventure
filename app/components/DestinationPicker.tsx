@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Platform } from 'react-native';
+import { View, Platform, StyleSheet } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
-import styles from '../styles/DestinationPickerStyles';
 
 type DestinationPickerProps = {
   location: string;
@@ -28,5 +27,27 @@ const DestinationPicker: React.FC<DestinationPickerProps> = ({ location, onValue
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  pickerContainer: {
+    backgroundColor: '#5664DD', // Blue background color
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 20,
+  },
+  label: {
+    fontSize: 16,
+    color: '#FCFAFA', // White color
+    marginBottom: 5,
+  },
+  picker: {
+    height: Platform.OS === 'ios' ? 200 : 50,
+    color: '#FCFAFA', // White color
+  },
+  pickerItem: {
+    fontSize: 16,
+    color: '#000807', // Black color
+  },
+});
 
 export default DestinationPicker;

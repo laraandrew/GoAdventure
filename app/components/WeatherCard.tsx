@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
-import styles from '../styles/WeatherCardStyles';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 // Mapping weather conditions to corresponding image sources
 const weatherImages: { [key: string]: any } = {
@@ -34,3 +33,34 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ date, weather, highTemp, lowT
 };
 
 export default WeatherCard;
+
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: '#FCFAFA',
+    borderRadius: 10,
+    padding: 15,
+    marginBottom: 25,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#ddd', // Add border color
+    shadowColor: '#000', // Add shadow for elevation effect
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+    elevation: 3, // For Android shadow
+  },
+  date: {
+    fontSize: 16,
+    color: '#000807',
+    marginBottom: 10,
+  },
+  weatherImage: {
+    width: 50,
+    height: 50,
+    marginBottom: 10,
+  },
+  temp: {
+    fontSize: 18,
+    color: '#000807',
+  },
+});

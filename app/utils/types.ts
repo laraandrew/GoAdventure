@@ -16,3 +16,10 @@ export type RootStackParamList = {
     }[];
   };
 };
+export type WeatherData = {
+  date: string;
+  conditions: string;
+  highTemp: number;
+  lowTemp: number;
+};
+

@@ -1,6 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
-import styles from '../styles/BackButtonStyles'; // Importing the styles from the separate file
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 type BackButtonProps = {
   onPress: () => void; // Function to handle the press event on the back button
@@ -8,12 +7,26 @@ type BackButtonProps = {
 
 const BackButton: React.FC<BackButtonProps> = ({ onPress }) => {
   return (
-    // TouchableOpacity component to make the back button touchable
     <TouchableOpacity style={styles.backButton} onPress={onPress}>
-      {/* Text displayed on the back button */}
       <Text style={styles.backButtonText}>Back</Text>
     </TouchableOpacity>
   );
 };
+
+// Creating a stylesheet for the BackButton component
+const styles = StyleSheet.create({
+  backButton: {
+    // Positioning the back button at the top left
+    position: 'absolute',
+    top: 40, // Distance from the top
+    left: 20, // Distance from the left
+    zIndex: 1, // Ensuring it appears above other elements
+  },
+  backButtonText: {
+    // Styling the text of the back button
+    color: '#3498db', // Blue color for the text
+    fontSize: 18, // Font size of the text
+  },
+});
 
 export default BackButton;

@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { RouteProp, useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList, WeatherType } from '../utils/types';
 import WeatherCard from '../components/WeatherCard';
 import BackButton from '../components/BackButton';
-import styles from '../styles/ResultsScreenStyles';
 
 type ResultsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Results'>;
 type ResultsScreenRouteProp = RouteProp<RootStackParamList, 'Results'>;
@@ -36,5 +35,25 @@ const ResultsScreen: React.FC<Props> = ({ route, navigation }) => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#000807',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#FCFAFA',
+    marginBottom: 20,
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+    paddingBottom: 20,
+    height: '100%', 
+  },
+});
 
 export default ResultsScreen;
