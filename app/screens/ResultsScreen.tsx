@@ -5,6 +5,8 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList, WeatherType } from '../utils/types';
 import WeatherCard from '../components/WeatherCard';
 import BackButton from '../components/BackButton';
+import { colors } from '../../assets/colors'
+
 
 type ResultsScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Results'>;
 type ResultsScreenRouteProp = RouteProp<RootStackParamList, 'Results'>;
@@ -40,13 +42,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#000807',
+    backgroundColor: colors.white,
+    color: colors.black,
+    fontFamily: 'Sansita One, sans-serif',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#FCFAFA',
     marginBottom: 20,
   },
   scrollViewContent: {
